@@ -52,7 +52,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #d4a373; /* muted copper accent */
+    color: #884dff; /* muted copper accent */
 }
 
 /* =========================
@@ -165,6 +165,12 @@ section {
 }
 
 /* =========================
+contact
+========================= */
+.contacSectiont{
+    color: #c6aef6;
+}
+/* =========================
    Map Section
 ========================= */
 #map {
@@ -198,7 +204,7 @@ footer {
     text-align: center;
     padding: 1.5rem;
     background: #2C2C2C;
-    color: #3e3b7b;
+    color: #b2afea;
     margin-top: 2rem;
     border-radius: 15px 15px 0 0;
 }
