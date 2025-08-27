@@ -7,9 +7,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth; /* smooth scrolling */
-}
 
 body {
     font-family: 'Montserrat', 'Segoe UI', sans-serif;
@@ -95,7 +92,11 @@ nav a:hover {
     color: #a4a3c1;
     font-weight: bold;
     font-size: 2rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+ text-shadow: 
+    -1px -1px 0 black, /* Top-left */
+    1px -1px 0 black,  /* Top-right */
+    -1px 1px 0 black,  /* Bottom-left */
+    1px 1px 0 black;   /* Bottom-right */
     z-index: 2;
 }
 
