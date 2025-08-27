@@ -259,10 +259,16 @@ footer {
     align-items: center;
     z-index: 1000;
 }
-.photographygallery{
+.PhotographyGallery{
     text-align:center; 
     margin-bottom:2rem; 
-    color:#a4a3c1;}
+    color:#a4a3c1;
+    padding:5px;
+    background-color: #252323;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+
+
+}
 .lightbox img {
     max-width: 90%;
     max-height: 90%;
