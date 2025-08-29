@@ -10,8 +10,10 @@
 body {
     font-family: 'Montserrat', 'Segoe UI', sans-serif;
     line-height: 1.6;
-    background-color: #1C1C1C; /* dark base */
-    color: #E0E0E0; /* light text */
+    background-color: #1C1C1C;
+    /* dark base */
+    color: #E0E0E0;
+    /* light text */
 }
 
 /* =========================
@@ -89,7 +91,7 @@ nav a:hover {
     color: #a4a3c1;
     font-weight: bold;
     font-size: 2rem;
-    text-shadow: 
+    text-shadow:
         -1px -1px 0 black,
         1px -1px 0 black,
         -1px 1px 0 black,
@@ -166,8 +168,9 @@ section {
     padding: 2rem;
     background: #2C2C2C;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     color: #c6aef6;
+      box-shadow: 0 5px 10px rgba(124, 58, 255, 0.918);
 }
 
 .contact-section h2 {
@@ -180,6 +183,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    
 }
 
 .contact-form label {
@@ -203,7 +207,7 @@ section {
 .contact-form textarea:focus {
     outline: none;
     border-color: #884dff;
-    box-shadow: 0 0 5px rgba(136,77,255,0.6);
+    box-shadow: 0 0 5px rgba(136, 77, 255, 0.6);
 }
 
 .contact-form button {
@@ -293,7 +297,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -322,21 +326,24 @@ footer {
     color: white;
     cursor: pointer;
 }
-.bookShortcut{
+
+.bookShortcut {
     display: flex;
-    justify-content:center;
-    background-color: #2C2C2C; 
-    padding:5px;
+    justify-content: center;
+    background-color: #2C2C2C;
+    padding: 5px;
     color: #6737d8;
-    font-weight:bold;
-    font-size:20px;
-    margin-bottom:10px;
-  
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+
 
 }
+
 .bookShortcut:hover {
-  box-shadow: #884dff  0  5px 10px ;  
+    box-shadow: #884dff 0 5px 10px;
 }
+
 /* =========================
    Media Queries
 ========================= */
@@ -370,46 +377,51 @@ footer {
         padding: 1.5rem;
     }
 }
+
 /* =========================
    Hamburger Menu
 ========================= */
 .hamburger {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: #a4a3c1;
-  cursor: pointer;
-  margin-top: 0.5rem;
-  z-index: 10001; /* above nav */
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #a4a3c1;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    z-index: 10001;
+    /* above nav */
 }
 
 /* Mobile Menu */
 @media (max-width: 768px) {
-  nav {
-    display: none; /* hidden by default */
-    flex-direction: column;
-    align-items: center;
-    background: #1c1c1c;
-    position: absolute;
-    top: 70px; /* below header */
-    right: 10px;
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    z-index: 1000;
-  }
+    nav {
+        display: none;
+        /* hidden by default */
+        flex-direction: column;
+        align-items: center;
+        background: #1c1c1c;
+        position: absolute;
+        top: 70px;
+        /* below header */
+        right: 10px;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+    }
 
-  nav.active {
-    display: flex; /* show when toggled */
-  }
+    nav.active {
+        display: flex;
+        /* show when toggled */
+    }
 
-  .hamburger {
-    display: block;
-  }
+    .hamburger {
+        display: block;
+    }
 
-  nav a {
-    margin: 10px 0;
-    font-size: 1.1rem;
-  }
+    nav a {
+        margin: 10px 0;
+        font-size: 1.1rem;
+    }
 }
