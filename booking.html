@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
 <header>
   <img src="images/favicon_io/favicon.ico" alt="Logo" class="logo-img">
   <div class="logo-text">
@@ -35,8 +36,6 @@
   </nav>
 </header>
 
-
-    </header>
     <div class="slideshow">
         <div class="slide active" style="background-image: url('images/sunrise.png');"></div>
         <div class="slide" style="background-image: url('images/wedding.jpg');"></div>
@@ -45,31 +44,50 @@
 
         <!-- Text in front -->
         <div class="overlay">
-            <h1>Welcome to my photography space</h1>
-            <p>Explore my portfolio and book your session today!</p>
+            <h1>Book now</h1>
+              <img src="images/Arrow.ico" alt="arrow" class="logo-img">
+           
         </div>
     </div>
 
-    <section id="about">
-
-        <div class="aboutmetxt">
-            <p>Hi! I'm Jo Smith, a passionate photographer born and raised in Dundee, Scotland. With a degree in
-                Photography and a deep love for the natural world, I specialize in capturing the beauty of nature
-                through my lens.Although nature photography is my true passion, I also take on general photography work
-                — including portraits, events, and commercial shoots — to support my creative journey. I believe every
-                photo should tell a story, and I strive to create images that are both artistic and meaningful. When I’m
-                not behind the camera, I’m exploring Scotland’s scenic landscapes or meeting new clients around
-                the city. Whether you're looking to document a special occasion or need professional photography for
-                your business, I’m here to help..</p>
-
-        </div>
-    </section>
 
       <section  id="contact">
-        <h2>Contact & Location</h2>
-        <p>any questions contact through email if like to book go to the booking form</p>
-         <a class="bookShortcut"  href="booking.html">Book Now</a>
-        <p class="Email">Email: <a href="mailto:jo@photography.com">jo@photography.com</a></p>
+        <section id="booking" class="contact-section">
+  <h2>Book a Photography Session</h2>
+  <p>Complete the form to book your session. You’ll get a confirmation email right away.</p>
+<p>also  check junk folder for it </p>
+  <form id="booking-form" class="contact-form">
+    <label for="email">Email*</label>
+<input type="email" id="email" name="email" required>
+
+
+    <label for="email">Email*</label>
+    <input type="email" id="email" name="user_email" required>
+
+    <label for="service">Service Type*</label>
+    <select id="service" name="service" required>
+      <option value="">-- Please choose --</option>
+      <option value="Nature Photography">Nature Photography</option>
+      <option value="Portraits">Portraits</option>
+      <option value="Events">Events</option>
+      <option value="Commercial">Commercial</option>
+    </select>
+
+    <label for="budget">Budget (£)</label>
+    <input type="number" id="budget" name="budget" min="50" step="10">
+
+    <label for="date">Preferred Date*</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="message">Additional Notes</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+
+    <button type="submit">Book Now</button>
+  </form>
+
+  <p id="form-status" class="status-message"></p>
+</section>
+
         <p>Visit the gallery: 123 Dundee Street, Dundee</p>
         <div id="map">
             <iframe
@@ -88,8 +106,11 @@
 
         <p>&copy; 2025 Jo Smith Photography</p>
     </footer>
+<!-- Load EmailJS SDK -->
 
-    <script src="Js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="Js/script.js"></script>
+
 
     
 
