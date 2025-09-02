@@ -51,3 +51,33 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+// Lightbox Script
+document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.getElementById("close");
+
+  // Select all gallery images
+  const galleryImages = document.querySelectorAll(".gallery-container img");
+
+  // Open lightbox on click
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex"; // show lightbox
+      lightboxImg.src = img.src;       // set clicked image
+      lightboxImg.alt = img.alt;
+    });
+  });
+
+  // Close lightbox when clicking "X"
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  // Close lightbox when clicking outside the image
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = "none";
+    }
+  });
+});

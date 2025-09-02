@@ -304,12 +304,19 @@ footer {
 }
 
 .PhotographyGallery {
+    margin-top:100px;
     text-align: center;
     margin-bottom: 2rem;
     color: #a4a3c1;
     padding: 5px;
     background-color: #252323;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.PhotographyGallery img {
+   width: 100%;
+  height: auto; 
+  object-fit: contain; 
 }
 
 .lightbox img {
