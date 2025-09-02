@@ -5,28 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jo Smith | Photography Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="/images//favicon_io/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Animate On Scroll library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Favicon for browser tab -->
+  <link rel="icon" type="image/x-icon" href="/images//favicon_io/favicon.ico">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
+  <!-- Header section with logo and navigation -->
   <header>
+    <!-- Logo image -->
     <img src="images/favicon_io/favicon.ico" alt="Logo" class="logo-img">
+
+    <!-- Logo text -->
     <div class="logo-text">
       <h1>Jo.Smith</h1>
       <h3>Photography</h3>
     </div>
 
-    <!-- Hamburger Button -->
+    <!-- Hamburger button for mobile navigation -->
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
       <i class="fa-solid fa-bars"></i>
     </button>
 
-    <!-- Navigation -->
+    <!-- Main navigation menu -->
     <nav id="nav-menu">
       <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
@@ -34,39 +45,44 @@
     </nav>
   </header>
 
+  <!-- Slideshow / hero section -->
   <div class="slideshow">
+    <!-- Background slides -->
     <div class="slide active" style="background-image: url('images/sunrise.png');"></div>
     <div class="slide" style="background-image: url('images/wedding.jpg');"></div>
     <div class="slide" style="background-image: url('images/Nature.jpg');"></div>
 
-
-    <!-- Text in front -->
+    <!-- Overlay text with call-to-action -->
     <div class="overlay">
-      <h1> click arrow to Book now</h1>
+      <h1>Click arrow to Book now</h1>
       <a href="booking.html#contact">
         <img src="images/Arrow.ico" alt="arrow" class="logo-img">
       </a>
     </div>
   </div>
 
-
+  <!-- Contact / booking section -->
   <section id="contact">
     <h2>Book a Photography Session</h2>
+
+    <!-- Booking form section -->
     <section id="booking" class="contact-section">
-      
       <h3>Complete the form to book your session. You’ll get a confirmation email right away.</h3>
 
-
+      <!-- Booking form using EmailJS -->
       <form id="booking-form" class="contact-form">
-
+        <!-- Hidden field for EmailJS -->
         <input type="hidden" name="to_email" value="{{to_email}}">
 
+        <!-- Name field -->
         <label for="user_name">Name*</label>
         <input type="text" id="user_name" name="user_name" required>
 
+        <!-- Email field -->
         <label for="email">Email*</label>
         <input type="email" id="email" name="email" required>
 
+        <!-- Service type dropdown -->
         <label for="service">Service Type*</label>
         <select id="service" name="service" required>
           <option value="">-- Please choose --</option>
@@ -76,43 +92,44 @@
           <option value="Commercial">Commercial</option>
         </select>
 
+        <!-- Budget input -->
         <label for="budget">Budget (£)</label>
         <input type="number" id="budget" name="budget" min="50" step="10">
 
+        <!-- Preferred date input -->
         <label for="date">Preferred Date*</label>
         <input type="date" id="date" name="date" required>
 
+        <!-- Additional notes -->
         <label for="message">Additional Notes</label>
         <textarea id="message" name="message" rows="5"></textarea>
 
+        <!-- Submit button -->
         <button type="submit">Book Now</button>
       </form>
-      <p>Also check your junk folder if you don’t see the email .</p>
+
+      <!-- User guidance and form status message -->
+      <p>Also check your junk folder if you don’t see the email.</p>
       <p id="form-status" class="status-message"></p>
-
-
-      
     </section>
+  </section>
 
-    </section>
+  <!-- Footer section -->
+  <footer>
+    <!-- Social links placeholder -->
+    <div class="socials">
+      <!-- Social links can be added here -->
+    </div>
 
-    <footer>
-      <div class="socials">
+    <!-- Copyright -->
+    <p>&copy; 2025 Jo Smith Photography</p>
+  </footer>
 
+  <!-- Load EmailJS SDK for form submission -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-
-      </div>
-
-      <p>&copy; 2025 Jo Smith Photography</p>
-    </footer>
-    <!-- Load EmailJS SDK -->
-
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="Js/script.js"></script>
-
-
-
-
+  <!-- Main JavaScript file -->
+  <script src="Js/script.js"></script>
 </body>
 
 </html>

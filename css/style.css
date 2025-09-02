@@ -53,6 +53,12 @@ nav a:hover {
     color: #884dff;
 }
 
+nav a.pageactive {
+    color: rgb(131, 49, 246) !important;
+    font-weight: bold;
+    text-decoration: underline; /* debugging */
+}
+
 /* =========================
    Hamburger Menu
 ========================= */
@@ -93,7 +99,6 @@ nav a:hover {
     opacity: 1;
 }
 
-/* Overlay for slides */
 .overlay {
     position: absolute;
     top: 50%;
@@ -103,11 +108,10 @@ nav a:hover {
     color: #a4a3c1;
     font-weight: bold;
     font-size: 2rem;
-    text-shadow:
-        -1px -1px 0 black,
-        1px -1px 0 black,
-        -1px 1px 0 black,
-        1px 1px 0 black;
+    text-shadow: -1px -1px 0 black,
+                 1px -1px 0 black,
+                -1px  1px 0 black,
+                 1px  1px 0 black;
     z-index: 2;
 }
 
@@ -169,6 +173,52 @@ section {
 .gallery-container img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(129, 115, 212, 0.4);
+}
+
+/* =========================
+   Lightbox
+========================= */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.PhotographyGallery {
+    margin: 40px 0 2rem;
+    text-align: center;
+    color: #a4a3c1;
+    padding: 5px;
+    background-color: #252323;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.PhotographyGallery img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 /* =========================
@@ -248,8 +298,7 @@ section {
 .map-container {
     position: relative;
     width: 100%;
-    padding-bottom:20%; /* 16:9 aspect ratio */
-    height: auto; /* remove invalid height */
+    padding-bottom: 20%; /* 16:9 aspect ratio */
 }
 
 .map-container iframe {
@@ -257,21 +306,22 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* fill container */
+    height: 100%;
     border: 0;
- 
 }
-
 
 /* =========================
    Social Links
 ========================= */
-.socials{
-box-shadow: 0px  5px 10px rgba(124, 58, 255, 0.918);
+.socials {
+    text-align: center;
+    margin: 2rem 0;
+    box-shadow: 0 5px 10px rgba(124, 58, 255, 0.918);
 }
+
 .socials a {
     font-size: 25px;
-    margin-right: 1rem;
+    margin: 0 1rem;
     color: #a4a3c1;
     text-decoration: none;
     font-weight: 600;
@@ -280,6 +330,16 @@ box-shadow: 0px  5px 10px rgba(124, 58, 255, 0.918);
 
 .socials a:hover {
     color: #6737d8;
+}
+
+.socials a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.socials a img:hover {
+    transform: scale(1.2);
 }
 
 /* =========================
@@ -294,69 +354,9 @@ footer {
     border-radius: 15px 15px 0 0;
 }
 
-.socials {
-    text-align: center;
-    margin: 2rem 0;
-}
-
-.socials a img {
-    width: 32px;
-    height: 32px;
-    margin: 0 10px;
-    transition: transform 0.3s;
-}
-
-.socials a img:hover {
-    transform: scale(1.2);
-}
-
 /* =========================
-   Lightbox
+   Book Shortcut Button
 ========================= */
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.PhotographyGallery {
-    margin-top: 100px;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #a4a3c1;
-    padding: 5px;
-    background-color: #252323;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-}
-
-.PhotographyGallery img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 5px;
-}
-
-#close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
-
 .bookShortcut {
     display: flex;
     justify-content: center;
@@ -366,6 +366,7 @@ footer {
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 10px;
+    transition: box-shadow 0.3s ease;
 }
 
 .bookShortcut:hover {
@@ -376,15 +377,11 @@ footer {
    Media Queries
 ========================= */
 @media (max-width: 1200px) {
-    .map-container {
-        padding-bottom: 50%;
-    }
+    .map-container { padding-bottom: 50%; }
 }
 
 @media (max-width: 992px) {
-    .map-container {
-        padding-bottom: 60%;
-    }
+    .map-container { padding-bottom: 60%; }
 }
 
 @media (max-width: 768px) {
@@ -404,24 +401,9 @@ footer {
         align-items: center;
     }
 
-    header {
-        padding: 1rem;
-    }
+    header { padding: 1rem; }
 
-    nav a {
-        margin: 0 10px;
-    }
-
-    .contact-section {
-        margin: 2rem 1rem;
-        padding: 1.5rem;
-    }
-
-    .map-container {
-        padding-bottom: 70%;
-    }
-
-    nav {
+    nav { 
         display: none;
         flex-direction: column;
         align-items: center;
@@ -435,32 +417,29 @@ footer {
         z-index: 1000;
     }
 
-    nav.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
+    nav.active { display: flex; }
 
     nav a {
         margin: 10px 0;
         font-size: 1.1rem;
     }
 
-    .slide.active .overlay {
-        font-size: 1.5rem;
+    .hamburger { display: block; }
+
+    .contact-section {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
     }
+
+    .map-container { padding-bottom: 70%; }
+
+    .slide.active .overlay { font-size: 1.5rem; }
 }
 
 @media (max-width: 576px) {
-    .map-container {
-        padding-bottom: 80%;
-    }
+    .map-container { padding-bottom: 80%; }
 
-    .slide.active .overlay {
-        font-size: 1.2rem;
-    }
+    .slide.active .overlay { font-size: 1.2rem; }
 
     .contact-form input,
     .contact-form select,

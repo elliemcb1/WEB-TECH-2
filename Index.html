@@ -5,39 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jo Smith | Photography Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/images//favicon_io/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Animate On Scroll (AOS) library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images//favicon_io/favicon.ico">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+    <!--  Header & Navigation -->
     <header>
+        <!-- Logo (favicon reused as a logo here) -->
         <img src="images/favicon_io/favicon.ico" alt="Logo" class="logo-img">
+
+        <!-- Logo text -->
         <div class="logo-text">
             <h1>Jo.Smith</h1>
             <h3>Photography</h3>
         </div>
 
-        <!-- Hamburger Button -->
+        <!-- Hamburger Button for mobile navigation -->
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
             <i class="fa-solid fa-bars"></i>
         </button>
 
-        <!-- Navigation -->
+        <!-- Navigation Menu -->
         <nav id="nav-menu">
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
-
-
             <a href="booking.html">Book Now</a>
         </nav>
     </header>
 
-
-    
+    <!--  Slideshow Hero Section -->
     <div class="slideshow">
+        <!-- Background images (cycling via JS) -->
         <div class="slide active" style="background-image: url('images/sunrise.png');"></div>
         <div class="slide" style="background-image: url('images/wedding.jpg');"></div>
         <div class="slide" style="background-image: url('images/Nature.jpg');"></div>
@@ -46,43 +55,59 @@
         <div class="slide" style="background-image: url('images/wedding3.jpg');"></div>
         <div class="slide" style="background-image: url('images/wedding2.jpg');"></div>
 
-
-        <!-- Text in front -->
+        <!-- Text overlay on top of slides -->
         <div class="overlay">
             <h1>Welcome to my photography space</h1>
             <p>Explore my portfolio and book your session today!</p>
         </div>
     </div>
 
+    <!--  About Section -->
     <section class="about">
-
         <div class="aboutmetxt">
             <h2>Hi!</h2>
-            <p> I'm Jo Smith, a passionate photographer born and raised in Dundee, Scotland. With a degree in
-                Photography and a deep love for the natural world, I specialize in capturing the beauty of nature
-                through my lens.Although nature photography is my true passion, I also take on general photography work
-                — including portraits, events, and commercial shoots — to support my creative journey. I believe every
-                photo should tell a story, and I strive to create images that are both artistic and meaningful. When I’m
-                not behind the camera, I’m exploring Scotland’s scenic landscapes or meeting new clients around
-                the city. Whether you're looking to document a special occasion or need professional photography for
-                your business, I’m here to help..</p>
-
+            <p>
+                I'm Jo Smith, a passionate photographer born and raised in Dundee, Scotland. 
+                With a degree in Photography and a deep love for the natural world, 
+                I specialize in capturing the beauty of nature through my lens.
+                Although nature photography is my true passion, I also take on general 
+                photography work — including portraits, events, and commercial shoots — 
+                to support my creative journey. 
+                <br><br>
+                I believe every photo should tell a story, and I strive to create images 
+                that are both artistic and meaningful. When I’m not behind the camera, 
+                I’m exploring Scotland’s scenic landscapes or meeting new clients around the city. 
+                Whether you're looking to document a special occasion or need professional 
+                photography for your business, I’m here to help.
+            </p>
         </div>
     </section>
 
+    <!-- Contact Section-->
     <section id="contact">
         <h2>Contact & Location</h2>
-        <p>any questions contact through email if like to book go to the booking form</p>
+        <p>Any questions? Contact me via email. To book, use the booking form.</p>
+
+        <!-- Quick access booking button -->
         <a class="bookShortcut" href="booking.html">Book Now</a>
+
+        <!-- Email address -->
         <p class="Email">Email: <a href="mailto:jo@photography.com">jo@photography.com</a></p>
+
+        <!-- Location -->
         <p>Visit the gallery: 123 Dundee Street, Dundee</p>
-       <div class="map-container">
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d24933.784783076466!2d-2.9859998724918166!3d56.4702411277149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s123%20Dundee%20Street%2C%20Dundee!5e0!3m2!1sen!2suk!4v1756291334041!5m2!1sen!2suk"
-        style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-       </div>
+
+        <!-- Embedded Google Map -->
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d24933.784783076466!2d-2.9859998724918166!3d56.4702411277149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s123%20Dundee%20Street%2C%20Dundee!5e0!3m2!1sen!2suk!4v1756291334041!5m2!1sen!2suk"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
     </section>
+
+    <!--   Social Media Links -->
     <div class="socials">
         <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://x.com/yourprofile" target="_blank"><i class="fab fa-x-twitter"></i></a>
@@ -90,15 +115,13 @@
         <a href="https://www.tiktok.com/@yourprofile" target="_blank"><i class="fab fa-tiktok"></i></a>
     </div>
 
+    <!--  Footer -->
     <footer>
-    
         <p>&copy; 2025 Jo Smith Photography</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="Js/script.js"></script>
-
-
-
 </body>
 
 </html>
