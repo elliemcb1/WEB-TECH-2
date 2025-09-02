@@ -2,126 +2,116 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jo Smith | Photography Portfolio</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="/images//favicon_io/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jo Smith | Photography Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images//favicon_io/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<header>
-  <img src="images/favicon_io/favicon.ico" alt="Logo" class="logo-img">
-  <div class="logo-text">
-    <h1>Jo.Smith</h1>
-    <h3>Photography</h3>
-  </div>
-
-  <!-- Hamburger Button -->
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-    <i class="fa-solid fa-bars"></i>
-  </button>
-
-  <!-- Navigation -->
-  <nav id="nav-menu">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="booking.html">Book Now</a>
-  </nav>
-</header>
-
-    <div class="slideshow">
-        <div class="slide active" style="background-image: url('images/sunrise.png');"></div>
-        <div class="slide" style="background-image: url('images/wedding.jpg');"></div>
-        <div class="slide" style="background-image: url('images/Nature.jpg');"></div>
-
-
-        <!-- Text in front -->
-        <div class="overlay">
-            <h1> click arrow to Book now</h1>
-             <a href="booking.html#contact">
-              <img src="images/Arrow.ico" alt="arrow" class="logo-img">
-           </a>
-        </div>
+  <header>
+    <img src="images/favicon_io/favicon.ico" alt="Logo" class="logo-img">
+    <div class="logo-text">
+      <h1>Jo.Smith</h1>
+      <h3>Photography</h3>
     </div>
 
+    <!-- Hamburger Button -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
 
-      <section  id="contact">
-        <section id="booking" class="contact-section">
-  <h2>Book a Photography Session</h2>
-  <p>Complete the form to book your session. You’ll get a confirmation email right away.</p>
+    <!-- Navigation -->
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Book Now</a>
+    </nav>
+  </header>
 
-  
-<form id="booking-form" class="contact-form">
-   
-    <input type="hidden" name="to_email" value="{{to_email}}">
-
-    <label for="user_name">Name*</label>
-    <input type="text" id="user_name" name="user_name" required>
-
-    <label for="user_email">Email*</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="service">Service Type*</label>
-    <select id="service" name="service" required>
-        <option value="">-- Please choose --</option>
-        <option value="Nature Photography">Nature Photography</option>
-        <option value="Portraits">Portraits</option>
-        <option value="Events">Events</option>
-        <option value="Commercial">Commercial</option>
-    </select>
-
-    <label for="budget">Budget (£)</label>
-    <input type="number" id="budget" name="budget" min="50" step="10">
-
-    <label for="date">Preferred Date*</label>
-    <input type="date" id="date" name="date" required>
-
-    <label for="message">Additional Notes</label>
-    <textarea id="message" name="message" rows="5"></textarea>
-
-    <button type="submit">Book Now</button>
-</form>
-<p>Also check your junk folder if you don’t see  the email .</p>
-<p id="form-status" class="status-message"></p>
+  <div class="slideshow">
+    <div class="slide active" style="background-image: url('images/sunrise.png');"></div>
+    <div class="slide" style="background-image: url('images/wedding.jpg');"></div>
+    <div class="slide" style="background-image: url('images/Nature.jpg');"></div>
 
 
-  <p id="form-status" class="status-message"></p>
-</section>
+    <!-- Text in front -->
+    <div class="overlay">
+      <h1> click arrow to Book now</h1>
+      <a href="booking.html#contact">
+        <img src="images/Arrow.ico" alt="arrow" class="logo-img">
+      </a>
+    </div>
+  </div>
 
-       <section id="contact">
-        <h2>Contact & Location</h2>
-        <p>any questions contact through email if like to book go to the booking form</p>
-        <p class="Email">Email: <a href="mailto:jo@photography.com">jo@photography.com</a></p>
-        <p>Visit the gallery: 123 Dundee Street, Dundee</p>
-        <div id="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d24933.784783076466!2d-2.9859998724918166!3d56.4702411277149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s123%20Dundee%20Street%2C%20Dundee!5e0!3m2!1sen!2suk!4v1756291334041!5m2!1sen!2suk"
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+
+  <section id="contact">
+    <h2>Book a Photography Session</h2>
+    <section id="booking" class="contact-section">
+      
+      <h3>Complete the form to book your session. You’ll get a confirmation email right away.</h3>
+
+
+      <form id="booking-form" class="contact-form">
+
+        <input type="hidden" name="to_email" value="{{to_email}}">
+
+        <label for="user_name">Name*</label>
+        <input type="text" id="user_name" name="user_name" required>
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="service">Service Type*</label>
+        <select id="service" name="service" required>
+          <option value="">-- Please choose --</option>
+          <option value="Nature Photography">Nature Photography</option>
+          <option value="Portraits">Portraits</option>
+          <option value="Events">Events</option>
+          <option value="Commercial">Commercial</option>
+        </select>
+
+        <label for="budget">Budget (£)</label>
+        <input type="number" id="budget" name="budget" min="50" step="10">
+
+        <label for="date">Preferred Date*</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="message">Additional Notes</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <button type="submit">Book Now</button>
+      </form>
+      <p>Also check your junk folder if you don’t see the email .</p>
+      <p id="form-status" class="status-message"></p>
+
+
+      
+    </section>
+
     </section>
 
     <footer>
-        <div class="socials">
-  
-    
-   
-</div>
+      <div class="socials">
 
-        <p>&copy; 2025 Jo Smith Photography</p>
+
+
+      </div>
+
+      <p>&copy; 2025 Jo Smith Photography</p>
     </footer>
-<!-- Load EmailJS SDK -->
+    <!-- Load EmailJS SDK -->
 
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script src="Js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="Js/script.js"></script>
 
 
-    
+
 
 </body>
 

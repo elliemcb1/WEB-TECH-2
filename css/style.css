@@ -109,7 +109,7 @@ section {
 /* =========================
    About Section
 ========================= */
-#about {
+.about {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
