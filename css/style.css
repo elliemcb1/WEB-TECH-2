@@ -156,6 +156,57 @@ section {
   border: 3px solid #4a319b;
   flex-shrink: 0;
 }
+/* =========================
+   Services 
+========================= */
+.services {
+    margin-top:25px;
+    margin-bottom:25px;
+    padding: 60px 20px;
+    background-color: #505050;
+    text-align: center;
+}
+.service-card {
+    background: #2C2C2C;
+    color: #E0E0E0;
+    border: 1px solid #654fad;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 250px;
+    box-shadow: 0 4px 10px rgba(110, 12, 190, 0.455);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom:100px;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.service-card {
+    height:90px;
+    width:100px;
+    background: rgb(48, 48, 48);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 250px;
+    box-shadow: 0 4px 8px rgba(182, 111, 236, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(172, 95, 232, 0.726);
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #555;
+    margin-bottom: 25px;
+}
 
 
 /* =========================
@@ -365,9 +416,9 @@ footer {
 .bookShortcut {
     display: flex;
     justify-content: center;
-    background-color: #2C2C2C;
+    background-color: #2e2e2e;
     padding: 5px;
-    color: #6737d8;
+    color: #5c2ad0;
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 10px;
@@ -375,7 +426,7 @@ footer {
 }
 
 .bookShortcut:hover {
-    box-shadow: #884dff 0 5px 10px;
+    box-shadow: #712aff 0 5px 10px;
 }
 
 /* =========================
