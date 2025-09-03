@@ -123,7 +123,7 @@ section {
 }
 
 /* =========================
-   About Section
+   About 
 ========================= */
 .about {
     margin-top: 10px;
@@ -143,15 +143,20 @@ section {
     flex-direction: column;
     justify-content: center;
     text-align: left;
+}.about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px; 
+  flex-wrap: wrap; 
 }
 
 .profile {
-    margin-top: 10px;
-    height: 180px;
-    width: 180px;
-    border-radius: 50%;
-    border: 3px solid #3f2c7e;
+  height: 480px;
+  width: 480px;
+  border: 3px solid #4a319b;
+  flex-shrink: 0;
 }
+
 
 /* =========================
    Gallery
@@ -447,3 +452,30 @@ footer {
         font-size: 0.9rem;
     }
 }
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+     @media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .aboutmetxt{
+    font-size:15px;
+  }
+
+  .profile {
+    margin-bottom: 10px;
+    height:200px;
+    width:200px;
+  }
+}
+
+  }
+
