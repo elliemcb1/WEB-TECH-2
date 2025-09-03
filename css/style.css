@@ -151,13 +151,15 @@ section {
 }
 
 .profile {
+    border-radius:20px;
   height: 480px;
   width: 480px;
-  border: 3px solid #4a319b;
+  border: 3px solid #7d5ce8;
   flex-shrink: 0;
+  box-shadow: 0 5px 20px rgba(148, 97, 220, 0.7);
 }
 /* =========================
-   Services 
+   Services
 ========================= */
 .services {
     margin-top:25px;
@@ -522,6 +524,7 @@ footer {
   }
 
   .profile {
+    border-radius:20px;
     margin-bottom: 10px;
     height:200px;
     width:200px;
