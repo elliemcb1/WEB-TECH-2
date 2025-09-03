@@ -1,24 +1,42 @@
 // Run scripts only after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
 
-  // HAMBURGER MENU TOGGLE
+// HAMBURGER MENU TOGGLE
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
 
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("nav-menu");
+if (hamburger && navMenu) {
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent immediate close from document listener
+    navMenu.classList.toggle("active");
 
-  if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-      // Toggle navigation menu visibility
-      navMenu.classList.toggle("active");
+    // Toggle hamburger/close icon
+    const icon = hamburger.querySelector("i");
+    if (icon) {
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    }
+  });
 
-      // Change icon between hamburger (☰) and close (×)
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      navMenu.classList.contains("active") &&
+      !navMenu.contains(e.target) &&
+      !hamburger.contains(e.target)
+    ) {
+      navMenu.classList.remove("active");
+
+      // Reset icon back to hamburger
       const icon = hamburger.querySelector("i");
       if (icon) {
-        icon.classList.toggle("fa-bars");
-        icon.classList.toggle("fa-times");
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-times");
       }
-    });
-  }
+    }
+  });
+}
+
 
   // SLIDESHOW AUTO ROTATION
 
