@@ -19,30 +19,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body>
+<body class="GalleryPage">
 
   <!-- Header section with logo and navigation -->
   <header>
-    <!-- Logo image -->
-    <img src="images/favicon_io/favicon.ico" alt="Logo" class="logo-img">
+    <!-- Logo -->
 
-    <!-- Logo text -->
-    <div class="logo-text">
-      <h1>Jo.Smith</h1>
-      <h3>Photography</h3>
+
+    <div class="logo">
+      <img src="images/Logo.png" alt="logo">
     </div>
 
-    <!-- Hamburger button for mobile navigation -->
+    <!-- Hamburger Button for mobile navigation -->
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
       <i class="fa-solid fa-bars"></i>
     </button>
 
-    <!-- Main navigation menu -->
+    <!-- Navigation Menu -->
     <nav id="nav-menu">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="booking.html">Book Now</a>
-      <a href="about.html">MyStory</a>
+      <a href="index.html">Welcome</a>
+      <a href="gallery.html">Explore My Visual Stories</a>
+      <a href="booking.html">Schedule a Shoot</a>
+      <a href="about.html">Behind the Lens</a>
+
     </nav>
   </header>
 
@@ -87,14 +86,15 @@
         <label for="service">Service Type*</label>
         <select id="service" name="service" required>
           <option value="">-- Please choose --</option>
-          <option value="Nature Photography">Nature Photography</option>
-          <option value="Portraits">Portraits</option>
-          <option value="Events"> weddings/Events</option>
+          <option value="Nature Photography">Nature Photography £25 p/h </option>
+          <option value="Portraits">Portraits £20-£50p/h</option>
+          <option value="Events"> weddings/Events £140 p/h</option>
           <option value="Commercial">Commercial</option>
         </select>
 
         <!-- Budget input -->
         <label for="budget">Budget (£)</label>
+        <p> please leave budget if selected commercial</p>
         <input type="number" id="budget" name="budget" min="50" step="10">
 
         <!-- Preferred date input -->
@@ -118,12 +118,12 @@
   <!-- Footer section -->
   <footer>
     <!-- Social links placeholder -->
-     <div class="socials">
-        <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/yourprofile" target="_blank"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.tiktok.com/@yourprofile" target="_blank"><i class="fab fa-tiktok"></i></a>
-         <a href="https://www.youtube.com/@yourprofile" target="_blank"><i class="fab fa-youtube"></i></a>
+    <div class="socials">
+      <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/yourprofile" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.tiktok.com/@yourprofile" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.youtube.com/@yourprofile" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
 
     <!-- Copyright -->
