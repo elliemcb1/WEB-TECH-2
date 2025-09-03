@@ -78,6 +78,16 @@ nav a.pageactive {
   
     
 }
+/* Hide menu by default */
+#nav-menu {
+  display: none;
+}
+
+/* Show it when active */
+#nav-menu.active {
+  display: flex;
+}
+
 
 /* =========================
    Slideshow

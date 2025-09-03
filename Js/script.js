@@ -53,7 +53,7 @@ if (hamburger && navMenu) {
 
       // Show new slide
       slides[current].classList.add("active");
-    }, 4000); // 4 seconds per slide
+    }, 5000); //  5seconds per slide
   }
 
   // EMAILJS BOOKING FORM
