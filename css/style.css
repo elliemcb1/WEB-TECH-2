@@ -18,9 +18,9 @@ body {
    Header & Navigation
 ========================= */
 header img {display: flex;
-     align-items:left;
-  max-width: 240px;
-  height: auto;
+align-items:left;
+  max-width: 140px;
+  height:140px;
 }
 
 
@@ -31,8 +31,8 @@ header {
     justify-content: space-between;
     background: #2c2c2c52;
     color: #a4a3c1;
-
-    top: 0;
+padding-bottom:0px;
+    top: -0;
     left: 0;
     width: 100%;
     z-index: 9999;
@@ -78,15 +78,8 @@ nav a.pageactive {
   
     
 }
-/* Hide menu by default */
-#nav-menu {
-  display: none;
-}
 
-/* Show it when active */
-#nav-menu.active {
-  display: flex;
-}
+
 
 
 /* =========================
@@ -448,6 +441,7 @@ footer {
     font-size: 20px;
     margin-bottom: 10px;
     transition: box-shadow 0.3s ease;
+    margin-top:15px;
 }
 
 
@@ -561,6 +555,14 @@ flex-wrap: wrap;}
     padding-top:35px;
     font-size:15px;
   }
+  #nav-menu {
+  display: none;
+}
+
+/* Show it when active */
+#nav-menu.active {
+  display: flex;
+}
  
 }
 
