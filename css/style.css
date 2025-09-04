@@ -247,7 +247,34 @@ margin-top:250px;
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(129, 115, 212, 0.4);
 }
+.collapsible {
+  display: none; /* hidden by default */
+  overflow: hidden;
+}
 
+.collapsible.active {
+  display: flex; /* or grid depending on your layout */
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.toggle {
+  cursor: pointer;
+  position: relative;
+}
+
+.toggle::after {
+  content: "▼"; /* arrow icon */
+  position: absolute;
+  right: 10px;
+  font-size: 0.8em;
+}
+
+.toggle.active::after {
+  content: "▲"; /* flipped when open */
+}
 /* =========================
    Lightbox
 ========================= */
