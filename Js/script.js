@@ -114,8 +114,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+//Collapseable gallery 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggles = document.querySelectorAll(".toggle");
 
-
+  toggles.forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      const container = toggle.nextElementSibling.nextElementSibling; // h3 then div
+      toggle.classList.toggle("active");
+      container.classList.toggle("active");
+    });
+  });
+});
 
 // HIGHLIGHT ACTIVE NAVIGATION LINK
 
