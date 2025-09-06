@@ -1,4 +1,4 @@
-// Run scripts only after the DOM is fully loaded
+
 document.addEventListener("DOMContentLoaded", () => {
 
 // HAMBURGER MENU TOGGLE
@@ -7,10 +7,9 @@ const navMenu = document.getElementById("nav-menu");
 
 if (hamburger && navMenu) {
   hamburger.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent immediate close from document listener
+    e.stopPropagation(); 
     navMenu.classList.toggle("active");
 
-    // Toggle hamburger/close icon
     const icon = hamburger.querySelector("i");
     if (icon) {
       icon.classList.toggle("fa-bars");
@@ -18,7 +17,8 @@ if (hamburger && navMenu) {
     }
   });
 
-  // Close menu when clicking outside
+
+  
   document.addEventListener("click", (e) => {
     if (
       navMenu.classList.contains("active") &&
@@ -27,7 +27,7 @@ if (hamburger && navMenu) {
     ) {
       navMenu.classList.remove("active");
 
-      // Reset icon back to hamburger
+      
       const icon = hamburger.querySelector("i");
       if (icon) {
         icon.classList.add("fa-bars");
@@ -91,28 +91,33 @@ if (hamburger && navMenu) {
 
 
 // LIGHTBOX IMAGE VIEWER
-
 document.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const closeBtn = document.getElementById("close");
 
-  const galleryImages = document.querySelectorAll(".gallery-container img");
-
-  // Open lightbox with clicked image
-  galleryImages.forEach(img => {
-    img.addEventListener("click", () => {
-      lightbox.style.display = "flex";
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
+  if (lightbox && lightboxImg && closeBtn) {
+    // open when clicking an image
+    document.querySelectorAll(".gallery-container img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
     });
-  });
 
-  // Close lightbox when "X" button clicked
-  closeBtn.addEventListener("click", () => {
-    lightbox.style.display = "none";
-  });
+    // ✅ close button
+    closeBtn.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
 
+    // ✅ click outside image closes 
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = "none";
+      }
+    });
+  }
 });
 
 
@@ -140,5 +145,47 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.add("pageactive");
       console.log("✅ Match found →", linkPage);
     }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // --- existing hamburger/lightbox/etc code stays here ---
+
+  // --- FILTER SCRIPT ---
+  const filterToggle = document.getElementById("filter-toggle");
+  const filterOptions = document.getElementById("filter-options");
+  const filterButtons = document.querySelectorAll(".filter-options button");
+  const gallerySections = document.querySelectorAll("section[data-category]");
+  const filterBar = document.querySelector(".filter-section");
+
+  // Toggle collapsible filter menu
+  if (filterToggle && filterOptions) {
+    filterToggle.addEventListener("click", () => {
+      const open = filterOptions.style.display === "block";
+      filterOptions.style.display = open ? "none" : "block";
+    });
+  }
+
+  // Apply filtering
+  function applyFilter(filter) {
+    gallerySections.forEach(sec => {
+      const category = (sec.dataset.category || "").trim().toLowerCase();
+      const show = (filter === "all" || category === filter);
+      sec.classList.toggle("is-hidden", !show);
+    });
+
+    // scroll to filter bar
+    if (filterBar) {
+      filterBar.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  // Button clicks
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      applyFilter(btn.getAttribute("data-filter"));
+    });
   });
 });
