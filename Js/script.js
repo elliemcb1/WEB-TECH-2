@@ -200,3 +200,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+function updateClock() {
+      const now = new Date();
+
+      // Time
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      let seconds = now.getSeconds();
+      let ampm = hours >= 12 ? "PM" : "AM";
+      hours = hours % 12 || 12;
+
+      // Add leading zeros
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      document.getElementById("time").textContent =
+        `${hours}:${minutes}:${seconds} ${ampm}`;
+
+      // Date
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      document.getElementById("date").textContent =
+        now.toLocaleDateString(undefined, options);
+    }
+
+    // Update every second
+    setInterval(updateClock, 1000);
+    updateClock(); // run immediately
