@@ -348,7 +348,7 @@ section {
 ========================= */
 .filter-section {
     margin-top: 150px;
-    position: sticky;
+  
     top: 80px;
     z-index: 100;
     background: #1a1a1a;
