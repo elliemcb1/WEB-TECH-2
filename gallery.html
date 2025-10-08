@@ -2,32 +2,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jo Smith | Gallery</title>
+  <!-- Basic page setup and metadata -->
+  <meta charset="UTF-8"> <!-- Ensures proper character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes layout responsive on all devices -->
+  <title>Jo Smith | Gallery</title> <!-- Title displayed on browser tab -->
 
-  <!-- Main stylesheet -->
+  <!-- Link to main stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Font Awesome icons -->
+  <!-- Font Awesome for icons (menu, social media, etc.) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Favicon -->
+  <!-- Favicon icon -->
   <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
 </head>
 
 <body class="GalleryPage">
-  <!-- Header -->
+  <!-- ===================== HEADER SECTION ===================== -->
   <header>
-
+    <!-- Logo area -->
     <div class="logo">
-      <img src="images/JoSmithLogo.svg" alt="logo">
+      <img src="images/JoSmithLogo.svg" alt="logo"> <!-- Displays site logo -->
     </div>
 
+    <!-- Hamburger icon for mobile navigation toggle -->
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
       <i class="fa-solid fa-bars"></i>
     </button>
 
+    <!-- Navigation menu -->
     <nav id="nav-menu">
       <a href="index.html">Welcome</a>
       <a href="gallery.html">Explore My Visual Stories</a>
@@ -36,12 +39,15 @@
     </nav>
   </header>
 
-  <!-- Filter Bar -->
+  <!-- ===================== FILTER BAR ===================== -->
+  <!-- Allows visitors to filter gallery by category -->
   <div class="filter-section">
+    <!-- Button to show/hide filter options on smaller screens -->
     <button class="filter-toggle" id="filter-toggle">
       <i class="fa-solid fa-filter"></i>Filter Gallery
     </button>
 
+    <!-- Filter buttons (categories) -->
     <div class="filter-options" id="filter-options">
       <button data-filter="all" class="active">Show All</button>
       <button data-filter="nature">Nature</button>
@@ -51,10 +57,11 @@
     </div>
   </div>
 
-  <!-- Nature Gallery -->
+  <!-- ===================== NATURE GALLERY SECTION ===================== -->
   <section class="galleryH1 filter-target" data-category="nature">
     <h2 class="PhotographyGallery">Nature Photography Gallery</h2>
     <h3>Click image to view</h3>
+    <!-- Image grid -->
     <div class="gallery-container">
       <img src="images/sunrise.png" alt="sunrise">
       <img src="images/Nature.jpg" alt="Nature mountains">
@@ -64,7 +71,7 @@
     </div>
   </section>
 
-  <!-- Christmas Gallery -->
+  <!-- ===================== CHRISTMAS GALLERY SECTION ===================== -->
   <section class="gallery filter-target" data-category="christmas">
     <h2 class="PhotographyGallery">Christmas Baby Photo Shoot</h2>
     <h3>Click image to view</h3>
@@ -77,7 +84,7 @@
     </div>
   </section>
 
-  <!-- Weddings Gallery -->
+  <!-- ===================== WEDDINGS GALLERY SECTION ===================== -->
   <section class="gallery filter-target" data-category="weddings">
     <h2 class="PhotographyGallery">Weddings Photography Gallery</h2>
     <h3>Click image to view</h3>
@@ -90,7 +97,7 @@
     </div>
   </section>
 
-  <!-- Family Gallery -->
+  <!-- ===================== FAMILY GALLERY SECTION ===================== -->
   <section class="gallery filter-target" data-category="family">
     <h2 class="PhotographyGallery">Family Photography Gallery</h2>
     <h3>Click image to view</h3>
@@ -103,37 +110,28 @@
     </div>
   </section>
 
-
-
-
-  <!-- Contact section with email and map -->
+  <!-- ===================== CONTACT SECTION ===================== -->
   <section id="contact">
     <h2>Contact & Location</h2>
     <p>Any questions? Contact me via email. To book, use the booking form.</p>
 
-
-
-
-    <!-- Email address -->
+    <!-- Contact email -->
     <p class="Email">Email: <a href="mailto:jo@photography.com">jo@photography.com</a></p>
 
-    <!-- Location -->
-    <p>Visit the gallery:987 Brook Street Dundee DD5 2EA/p>
+    <!-- Physical gallery address (FIX: add closing </p> tag) -->
+    <p>Visit the gallery: 987 Brook Street Dundee DD5 2EA</p>
 
-      <!-- Embedded Google Map -->
+    <!-- Embedded Google Map of the gallery location -->
     <div class="map-container">
-      <iframe title="map of 123 dundee road"
+      <iframe title="map of 987 Brook Street Dundee"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2204.1589495934436!2d-2.8671319231772268!3d56.465022673356145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48865e96e548488d%3A0x652981c5a1436741!2s987%20Brook%20St%2C%20Broughty%20Ferry%2C%20Dundee%20DD5%202EA!5e0!3m2!1sen!2suk!4v1756895630168!5m2!1sen!2suk"
         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 
-
-  <!-- Social Links -->
-
-
-  <!-- Footer -->
+  <!-- ===================== FOOTER SECTION ===================== -->
   <footer>
+    <!-- Social media icons -->
     <div class="socials">
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-x-twitter"></i></a>
@@ -141,16 +139,22 @@
       <a href="#"><i class="fab fa-tiktok"></i></a>
       <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
+
+    <!-- Copyright notice -->
     <p>&copy; 2025 Jo Smith Photography</p>
   </footer>
 
-  <!-- Lightbox -->
+  <!-- ===================== LIGHTBOX FEATURE ===================== -->
+  <!-- Popup modal for enlarged image display -->
   <div id="lightbox" class="lightbox">
+    <!-- Close button -->
     <span id="close">&times;</span>
+    <!-- Image displayed inside the lightbox -->
     <img id="lightbox-img" src="images/placeholder.png" alt="Enlarged photo">
   </div>
 
-  <!-- External JS -->
+  <!-- ===================== EXTERNAL SCRIPT ===================== -->
+  <!-- Links JavaScript file that controls menu toggle, filters, and lightbox -->
   <script src="Js/script.js"></script>
 </body>
 

@@ -2,38 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jo Smith | Photography My Story</title>
+    <!-- Basic Page Setup -->
+    <meta charset="UTF-8"> <!-- Sets character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures mobile responsiveness -->
+    <title>Jo Smith | Photography My Story</title> <!-- Title that appears in browser tab -->
 
-    <!-- Main stylesheet -->
+    <!-- Link to Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Animate On Scroll (AOS) library -->
+    <!-- Animate On Scroll (AOS) Library for smooth scrolling animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Favicon -->
+    <!-- Favicon (icon displayed in browser tab) -->
     <link rel="icon" type="image/x-icon" href="/images//favicon_io/favicon.ico">
 
-    <!-- Font Awesome icons -->
+    <!-- Font Awesome Icons for social media and menu icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="GalleryPage">
-    <!--  Header & Navigation -->
+    <!-- ================= HEADER & NAVIGATION ================= -->
     <header>
-
         <!-- Logo -->
-
-
-
         <div class="logo">
-            <img src="images/JoSmithLogo.svg" alt="logo">
+            <img src="images/JoSmithLogo.svg" alt="logo"> <!-- Photographer's logo -->
         </div>
 
-        <!-- Hamburger Button for mobile navigation -->
+        <!-- Hamburger Button for Mobile Navigation -->
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars"></i> <!-- Icon representing menu toggle -->
         </button>
 
         <!-- Navigation Menu -->
@@ -42,71 +39,84 @@
             <a href="gallery.html">Explore My Visual Stories</a>
             <a href="booking.html">Schedule a Shoot</a>
             <a href="about.html">Behind the Lens</a>
-
         </nav>
     </header>
 
+    <!-- ================= MY STORY SECTION ================= -->
+    <section class="about">
+        <!-- Section Title -->
+        <h1 class="myStoryH1">📸My Story 📸</h1>
 
-
-    <!-- MyStory-Section -->
-    <section class="about"> 
-               <h1 class="myStoryH1"> 📸My Story 📸</h1>
+        <!-- About Container holding image and text -->
         <div class="about-container">
+
+            <!-- Profile Image -->
             <img class="profile" src="/images/Profile.jpg" alt="Jo Smith Profile">
-    
+
+            <!-- Text Content -->
             <div class="aboutmetxt">
+                <!-- Personal Story Paragraphs -->
+                <p class="MyStory">
+                    Photography has always been my way of connecting with the world — not just through images, 
+                    but through emotion, atmosphere, and the quiet stories that unfold in everyday moments. 
+                    I’m endlessly inspired by Scotland’s shifting light, rugged landscapes, and the raw beauty 
+                    that lives in both nature and people.
+                </p>
 
+                <p class="MyStory">
+                    My journey began with a second-hand camera and long walks through the Highlands, 
+                    chasing golden hour and misty mornings. Over time, what started as a hobby grew into a calling. 
+                    I’ve had the joy of working with families, couples, creatives, and small businesses — 
+                    each shoot a collaboration, each subject a new story waiting to be told.
+                </p>
 
-                <P class="MyStory">Photography has always been my way of connecting with the world — not just through
-                    images, but through emotion, atmosphere, and the quiet stories that unfold in everyday moments. I’m
-                    endlessly inspired by Scotland’s shifting light, rugged landscapes, and the raw beauty that lives in
-                    both nature and people.</P>
+                <p class="MyStory">
+                    I believe in authenticity over perfection. My style leans into natural light, candid movement, 
+                    and the kind of fleeting expressions that say more than words ever could. 
+                    Whether I’m photographing a windswept elopement on the Isle of Skye 
+                    or a quiet portrait session in a Dundee café, I bring the same sense of wonder 
+                    and care to every frame.
+                </p>
 
-                <p class="MyStory">My journey began with a second-hand camera and long walks through the Highlands,
-                    chasing golden hour and misty mornings. Over time, what started as a hobby grew into a calling. I’ve
-                    had the joy of working with families, couples, creatives, and small businesses — each shoot a
-                    collaboration, each subject a new story waiting to be told.</p>
-
-                <p class="MyStory">I believe in authenticity over perfection. My style leans into natural light, candid
-                    movement, and the kind of fleeting expressions that say more than words ever could. Whether I’m
-                    photographing a windswept elopement on the Isle of Skye or a quiet portrait session in a Dundee
-                    café, I bring the same sense of wonder and care to every frame.</p>
-
-                <p class="MyStory">When I’m not behind the lens, you’ll find me hiking with my dog, editing in cozy
-                    corners, or sipping strong coffee while dreaming up my next creative project. I’m always open to new
-                    ideas, new faces, and new adventures — so if you’re curious about working together, I’d love to hear
-                    from you</p>
+                <p class="MyStory">
+                    When I’m not behind the lens, you’ll find me hiking with my dog, editing in cozy corners, 
+                    or sipping strong coffee while dreaming up my next creative project. 
+                    I’m always open to new ideas, new faces, and new adventures — 
+                    so if you’re curious about working together, I’d love to hear from you.
+                </p>
             </div>
         </div>
     </section>
 
-
-    <!-- Contact Section-->
+    <!-- ================= CONTACT SECTION ================= -->
     <section id="contact">
         <h2>Contact & Location</h2>
         <p>Any questions? Contact me via email. To book, use the booking form.</p>
 
-        <!-- Quick access booking button -->
+        <!-- Quick Access Booking Button -->
         <a class="bookShortcut" href="booking.html">Book Now</a>
 
-        <!-- Email address -->
+        <!-- Email Address -->
         <p class="Email">Email: <a href="mailto:jo@photography.com">jo@photography.com</a></p>
 
-        <!-- Location -->
-        <p>Visit the gallery:987 Brook Street Dundee DD5 2EA/p>
+        <!-- Location Text (Note: missing closing tag fixed below) -->
+        <p>Visit the gallery: 987 Brook Street Dundee DD5 2EA</p>
 
-            <!-- Embedded Google Map -->
+        <!-- Embedded Google Map -->
         <div class="map-container">
-            <iframe title="map of 123 dundee road"
+            <iframe 
+                title="map of 987 Brook Street Dundee"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2204.1589495934436!2d-2.8671319231772268!3d56.465022673356145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48865e96e548488d%3A0x652981c5a1436741!2s987%20Brook%20St%2C%20Broughty%20Ferry%2C%20Dundee%20DD5%202EA!5e0!3m2!1sen!2suk!4v1756895630168!5m2!1sen!2suk"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                allowfullscreen 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </section>
 
-
-
-    <!--  Footer -->
+    <!-- ================= FOOTER SECTION ================= -->
     <footer>
+        <!-- Social Media Links -->
         <div class="socials">
             <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://x.com/yourprofile" target="_blank"><i class="fab fa-x-twitter"></i></a>
@@ -114,11 +124,13 @@
             <a href="https://www.tiktok.com/@yourprofile" target="_blank"><i class="fab fa-tiktok"></i></a>
             <a href="https://www.youtube.com/@yourprofile" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
+
+        <!-- Copyright Notice -->
         <p>&copy; 2025 Jo Smith Photography</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="Js/script.js"></script>
+    <!-- ================= EXTERNAL SCRIPT ================= -->
+    <script src="Js/script.js"></script> <!-- JavaScript for interactivity -->
 </body>
 
 </html>

@@ -2,37 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jo Smith | Photography </title>
+    <!-- Metadata and external resource links -->
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 for all languages -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive scaling on all devices -->
+    <title>Jo Smith | Photography</title> <!-- Page title shown in browser tab -->
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Animate On Scroll (AOS) library -->
+    <!-- Animate On Scroll (AOS) library for scroll animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Favicon -->
+    <!-- Favicon icon displayed in browser tab -->
     <link rel="icon" type="image/x-icon" href="/images//favicon_io/favicon.ico">
 
-    <!-- Font Awesome icons -->
+    <!-- Font Awesome for social media and menu icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="GalleryPage">
-    <!--  Header & Navigation -->
+    <!-- ================= HEADER SECTION ================= -->
     <header>
-        <!-- Logo -->
+        <!-- Logo area -->
         <div class="logo">
-            <img src="images/JoSmithLogo.svg" alt="logo">
+            <img src="images/JoSmithLogo.svg" alt="logo"> <!-- Photographer's logo -->
         </div>
 
-        <!-- Hamburger  -->
+        <!-- Hamburger button for mobile navigation -->
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars"></i> <!-- Font Awesome icon for menu -->
         </button>
 
-        <!-- Navigation Menu -->
+        <!-- Main navigation menu -->
         <nav id="nav-menu">
             <a href="index.html">Welcome</a>
             <a href="gallery.html">Explore My Visual Stories</a>
@@ -41,9 +42,9 @@
         </nav>
     </header>
 
-    <!--  Slideshow Hero Section -->
+    <!-- ================= HERO SLIDESHOW SECTION ================= -->
     <div class="slideshow">
-        <!-- Background images (cycling via JS) -->
+        <!-- Background slides (images that will cycle via JavaScript) -->
         <div class="slide active" style="background-image: url('images/sunrise.png');"></div>
         <div class="slide" style="background-image: url('images/wedding.jpg');"></div>
         <div class="slide" style="background-image: url('images/Nature.jpg');"></div>
@@ -52,14 +53,14 @@
         <div class="slide" style="background-image: url('images/wedding3.jpg');"></div>
         <div class="slide" style="background-image: url('images/wedding2.jpg');"></div>
 
-        <!-- Text overlay on top of slides -->
+        <!-- Text overlay placed on top of slideshow images -->
         <div class="overlay">
             <h1>Welcome to my photography space</h1>
             <p>Explore my portfolio and book your session today!</p>
         </div>
     </div>
 
-    <!--  About Section -->
+    <!-- ================= ABOUT SECTION ================= -->
     <section class="about">
         <div class="aboutmetxt">
             <h2>Hi!</h2>
@@ -69,85 +70,87 @@
                 I specialize in capturing the beauty of nature through my lens.
                 Although nature photography is my true passion, I also take on general
                 photography work — including portraits, events, and commercial shoots —
-                to support my creative journey. </p>
-
-            I believe every photo should tell a story, and I strive to create images
-            <p>that are both artistic and meaningful. When I’m not behind the camera,
-                I’m exploring Scotland’s scenic landscapes or meeting new clients around the city.
-                Whether you're looking to document a special occasion or need professional
-                photography for your business, I’m here to help. learn more about my story bellow
+                to support my creative journey.
             </p>
 
-            <a class="bookShortcut" href="about.html">My Story</a>
+            <p>
+                I believe every photo should tell a story, and I strive to create images
+                that are both artistic and meaningful. When I’m not behind the camera,
+                I’m exploring Scotland’s scenic landscapes or meeting new clients around the city.
+                Whether you're looking to document a special occasion or need professional
+                photography for your business, I’m here to help. Learn more about my story below.
+            </p>
 
+            <!-- Link to the About page -->
+            <a class="bookShortcut" href="about.html">My Story</a>
         </div>
     </section>
-    <!-- Services Section -->
+
+    <!-- ================= SERVICES SECTION ================= -->
     <section class="services" id="services">
         <h2>Photography Services</h2>
-        <p>Whether you're celebrating a milestone or elevating your brand, I offer tailored photography services to meet
-            your needs.</p>
+        <p>
+            Whether you're celebrating a milestone or elevating your brand,
+            I offer tailored photography services to meet your needs.
+        </p>
 
+        <!-- Grid of photography service cards -->
         <div class="service-cards">
+            <!-- Nature Photography Card -->
             <div class="service-card">
-                <i class="fas fa-tree"></i>
+                <i class="fas fa-tree"></i> <!-- Icon representing nature -->
                 <h3>Nature Photography</h3>
-                <p>40 p/h</p>
+                <p>£40 p/h</p>
             </div>
 
+            <!-- Portrait Sessions Card -->
             <div class="service-card">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-user"></i> <!-- Icon representing portrait -->
                 <h3>Portrait Sessions</h3>
-                <p>£20 -£50 p/p</p>
-
+                <p>£20 - £50 p/p</p>
             </div>
 
+            <!-- Weddings & Events Card -->
             <div class="service-card">
-                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i> <!-- Icon representing weddings -->
                 <h3>Weddings & Events</h3>
                 <p>£140 p/h</p>
-
             </div>
 
+            <!-- Commercial Shoots Card -->
             <div class="service-card">
-                <i class="fas fa-briefcase"></i>
+                <i class="fas fa-briefcase"></i> <!-- Icon representing business -->
                 <h3>Commercial Shoots</h3>
-                <p> prices are negotiable</p>
-
+                <p>Prices are negotiable</p>
             </div>
         </div>
 
-        <!-- Call to action -->
+        <!-- Call-to-action button -->
         <a class="bookShortcut" href="booking.html">Book a Session</a>
     </section>
 
-    <!-- Contact Section-->
+    <!-- ================= CONTACT SECTION ================= -->
     <section id="contact">
         <h2>Contact & Location</h2>
         <p>Any questions? Contact me via email. To book, use the booking form.</p>
 
-
-
-
         <!-- Email address -->
         <p class="Email">Email: <a href="mailto:jo@photography.com">jo@photography.com</a></p>
 
-        <!-- Location -->
-        <p>Visit the gallery:987 Brook Street Dundee DD5 2EA/p>
+        <!-- Physical location (typo fixed: closing tag added) -->
+        <p>Visit the gallery: 987 Brook Street Dundee DD5 2EA</p>
 
-            <!-- Embedded Google Map -->
+        <!-- Embedded Google Map showing the address -->
         <div class="map-container">
-            <iframe title="map of 123 dundee road"
+            <iframe title="map of 987 Brook Street Dundee"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2204.1589495934436!2d-2.8671319231772268!3d56.465022673356145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48865e96e548488d%3A0x652981c5a1436741!2s987%20Brook%20St%2C%20Broughty%20Ferry%2C%20Dundee%20DD5%202EA!5e0!3m2!1sen!2suk!4v1756895630168!5m2!1sen!2suk"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
-    <!--   Social Media Links -->
-
-
-    <!--  Footer -->
+    <!-- ================= FOOTER SECTION ================= -->
     <footer>
+        <!-- Social media links with icons -->
         <div class="socials">
             <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://x.com/yourprofile" target="_blank"><i class="fab fa-x-twitter"></i></a>
@@ -155,10 +158,13 @@
             <a href="https://www.tiktok.com/@yourprofile" target="_blank"><i class="fab fa-tiktok"></i></a>
             <a href="https://www.youtube.com/@yourprofile" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
+
+        <!-- Copyright text -->
         <p>&copy; 2025 Jo Smith Photography</p>
     </footer>
 
-    <!-- Scripts -->
+    <!-- ================= SCRIPTS ================= -->
+    <!-- External JavaScript file for interactive features (menu toggle, slideshow, etc.) -->
     <script src="Js/script.js"></script>
 </body>
 

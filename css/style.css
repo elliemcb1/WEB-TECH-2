@@ -1,12 +1,14 @@
 /* =========================
    Reset & Base Styles
-========================= */
+   ========================= */
+/* Removes default browser spacing and sets consistent box sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Base font and color settings for the whole page */
 body {
     font-family: 'Montserrat', 'Segoe UI', sans-serif;
     line-height: 1.6;
@@ -15,16 +17,20 @@ body {
 
 /* =========================
    Clock
-========================= */
+   ========================= */
 .clock {
     border-radius: 12px;
     text-align: center;
 }
+
+/* Digital time display styling */
 #time {
     font-size: 2rem;
     font-weight: bold;
     color: #9f63ff;
 }
+
+/* Date display styling */
 #date {
     font-size: 1.2rem;
     color: #8e61ff;
@@ -32,7 +38,8 @@ body {
 
 /* =========================
    Header & Navigation
-========================= */
+   ========================= */
+/* Logo styling */
 header img {
     display: flex;
     align-items: left;
@@ -40,6 +47,7 @@ header img {
     height: 140px;
 }
 
+/* Header layout and appearance */
 header {
     display: flex;
     flex-direction: row;
@@ -48,38 +56,42 @@ header {
     background: #03030393;
     color: #a4a3c1;
     padding-bottom: 0px;
-    top: -0;
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 9999;
-    position: absolute;
 }
 
+/* Navigation bar container */
 #nav-menu {
     display: flex;
     gap: 20px;
     padding-right: 20px;
 }
 
+/* Navigation links styling */
 nav a {
     font-size: 15px;
     color: #ffffff;
-    gap: 105px;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
+/* Hover effect for navigation links */
 nav a:hover {
     color: #884dff;
 }
 
+/* Highlights the current active page */
 nav a.pageactive {
     color: rgb(131, 49, 246) !important;
     font-weight: bold;
     text-decoration: underline;
 }
 
+/* Hamburger menu icon (for mobile view) */
 .hamburger {
     display: none;
     font-size: 28px;
@@ -92,7 +104,8 @@ nav a.pageactive {
 
 /* =========================
    Slideshow
-========================= */
+   ========================= */
+/* Slideshow container setup */
 .slideshow {
     position: relative;
     width: 100%;
@@ -100,6 +113,7 @@ nav a.pageactive {
     overflow: hidden;
 }
 
+/* Each slide takes full space but starts hidden */
 .slide {
     position: absolute;
     top: 0;
@@ -112,10 +126,12 @@ nav a.pageactive {
     transition: opacity 1s ease-in-out;
 }
 
+/* Only active slide is visible */
 .slide.active {
     opacity: 1;
 }
 
+/* Overlay text in slideshow */
 .overlay {
     border-radius: 20px;
     background-color: #0303031b;
@@ -127,20 +143,22 @@ nav a.pageactive {
     color: #e1e1e5;
     font-weight: bold;
     font-size: 2rem;
-    text-shadow: 0px 5px 10px#7226f6;
+    text-shadow: 0px 5px 10px #7226f6;
     z-index: 2;
 }
 
 /* =========================
    Sections
-========================= */
+   ========================= */
+/* Adds spacing when scrolling to anchors */
 section {
     scroll-margin-top: 100px;
 }
 
 /* =========================
    About 
-========================= */
+   ========================= */
+/* About section container */
 .about {
     margin-top: 10px;
     display: flex;
@@ -153,6 +171,7 @@ section {
     gap: 2rem;
 }
 
+/* About text block styling */
 .aboutmetxt {
     flex: 1;
     display: flex;
@@ -161,6 +180,7 @@ section {
     text-align: left;
 }
 
+/* Container for profile and text */
 .about-container {
     display: flex;
     align-items: flex-start;
@@ -168,11 +188,13 @@ section {
     flex-wrap: wrap;
 }
 
+/* Centered heading for "My Story" */
 .myStoryH1 {
     margin-top: 150px;
     text-align: center;
 }
 
+/* Profile image styling */
 .profile {
     border-radius: 20px;
     height: 480px;
@@ -184,26 +206,26 @@ section {
 
 /* =========================
    Services
-========================= */
+   ========================= */
+/* Services section background */
 .services {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin: 25px 0;
     padding: 60px 20px;
     background-color: #505050;
     text-align: center;
 }
 
+/* Individual service cards */
 .service-card {
     background: #2C2C2C;
     color: #E0E0E0;
     border: 1px solid #654fad;
     border-radius: 10px;
-    max-width: 250px;
     box-shadow: 0 4px 10px rgba(110, 12, 190, 0.455);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 100px;
 }
 
+/* Layout for all service cards */
 .service-cards {
     display: flex;
     flex-wrap: wrap;
@@ -212,26 +234,28 @@ section {
     margin-top: 30px;
 }
 
+/* Small square cards */
 .service-card {
     height: 90px;
     width: 100px;
     background: rgb(48, 48, 48);
     border-radius: 10px;
     padding-top: 10px;
-    max-width: 250px;
-    box-shadow: 0 4px 8px rgba(182, 111, 236, 0.1);
     transition: transform 0.3s ease;
 }
 
+/* Title inside service card */
 .service-card h3 {
     margin-top: 15px;
 }
 
+/* Hover effect for cards */
 .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(172, 95, 232, 0.726);
 }
 
+/* Service icons */
 .service-card i {
     font-size: 40px;
     color: #555;
@@ -240,15 +264,18 @@ section {
 
 /* =========================
    Gallery
-========================= */
+   ========================= */
+/* Gallery background */
 .GalleryPage {
     background-color: #030303;
 }
 
+/* Gallery heading */
 .galleryH1 {
     margin-top: 50px;
 }
 
+/* Layout for gallery images */
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
@@ -257,17 +284,20 @@ section {
     padding: 2rem 0;
 }
 
+/* Gallery image styles */
 .gallery-container img {
     max-width: 280px;
     border-radius: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Hover zoom and shadow */
 .gallery-container img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(129, 115, 212, 0.4);
 }
 
+/* Collapsible gallery toggle system */
 .collapsible {
     display: none;
     overflow: hidden;
@@ -281,11 +311,13 @@ section {
     transition: all 0.3s ease;
 }
 
+/* Dropdown toggle for sections */
 .toggle {
     cursor: pointer;
     position: relative;
 }
 
+/* Adds arrow icon */
 .toggle::after {
     content: "▼";
     position: absolute;
@@ -293,13 +325,15 @@ section {
     font-size: 0.8em;
 }
 
+/* Flips arrow when active */
 .toggle.active::after {
     content: "▲";
 }
 
 /* =========================
    Lightbox
-========================= */
+   ========================= */
+/* Overlay background for enlarged image view */
 .lightbox {
     display: none;
     position: fixed;
@@ -313,12 +347,14 @@ section {
     z-index: 1000;
 }
 
+/* Enlarged image in lightbox */
 .lightbox img {
     max-width: 90%;
     max-height: 90%;
     border-radius: 5px;
 }
 
+/* Close button for lightbox */
 #close {
     position: absolute;
     top: 100px;
@@ -328,6 +364,7 @@ section {
     cursor: pointer;
 }
 
+/* Gallery section styling */
 .PhotographyGallery {
     margin: 40px 0 2rem;
     text-align: center;
@@ -345,12 +382,10 @@ section {
 
 /* =========================
    Filter Bar
-========================= */
+   ========================= */
+/* Top filter bar section */
 .filter-section {
     margin-top: 150px;
-  
-    top: 80px;
-    z-index: 100;
     background: #1a1a1a;
     padding: 1rem;
     text-align: center;
@@ -358,6 +393,7 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+/* Main filter button */
 .filter-toggle {
     background: #2e2e2e;
     color: #d0bff8;
@@ -375,6 +411,7 @@ section {
     color: white;
 }
 
+/* Hidden filter options (shown when active) */
 .filter-options {
     display: none;
     margin-top: 1rem;
@@ -391,19 +428,21 @@ section {
     transition: background 0.3s ease;
 }
 
+/* Active or hovered filter buttons */
 .filter-options button.active,
 .filter-options button:hover {
     background: #884dff;
     color: #fff;
 }
 
+/* Class used to hide filtered items */
 .is-hidden {
     display: none !important;
 }
 
 /* =========================
    Contact / Booking Form
-========================= */
+   ========================= */
 .contact-section {
     max-width: 600px;
     margin: 3rem auto;
@@ -414,23 +453,27 @@ section {
     color: #c6aef6;
 }
 
+/* Section heading */
 .contact-section h2 {
     margin-bottom: 1rem;
     text-align: center;
     color: #a4a3c1;
 }
 
+/* Form layout */
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
+/* Labels styling */
 .contact-form label {
     font-weight: 600;
     font-size: 0.95rem;
 }
 
+/* Inputs, dropdowns, and text areas */
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
@@ -442,6 +485,7 @@ section {
     font-size: 1rem;
 }
 
+/* Focus state for inputs */
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
@@ -450,6 +494,7 @@ section {
     box-shadow: 0 0 5px rgba(136, 77, 255, 0.6);
 }
 
+/* Submit button styling */
 .contact-form button {
     padding: 0.8rem;
     background: #884dff;
@@ -466,6 +511,7 @@ section {
     background: #6737d8;
 }
 
+/* Message displayed after submission */
 .status-message {
     margin-top: 1rem;
     font-weight: 600;
@@ -474,7 +520,7 @@ section {
 
 /* =========================
    Map Section
-========================= */
+   ========================= */
 .map-container {
     position: relative;
     width: 100%;
@@ -492,7 +538,7 @@ section {
 
 /* =========================
    Social Links
-========================= */
+   ========================= */
 .socials {
     display: inline-flex;
     text-align: center;
@@ -513,6 +559,7 @@ section {
     color: #6737d8;
 }
 
+/* Social media icons */
 .socials a img {
     width: 32px;
     height: 32px;
@@ -525,7 +572,7 @@ section {
 
 /* =========================
    Footer
-========================= */
+   ========================= */
 footer {
     text-align: center;
     padding: 1.5rem;
@@ -537,7 +584,7 @@ footer {
 
 /* =========================
    Book Shortcut Button
-========================= */
+   ========================= */
 .bookShortcut {
     text-decoration: none;
     display: inline-flex;
@@ -547,9 +594,8 @@ footer {
     color: #d0bff8;
     font-weight: bold;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin: 15px 0 10px;
     transition: box-shadow 0.3s ease;
-    margin-top: 15px;
 }
 
 .bookShortcut:hover {
@@ -558,19 +604,22 @@ footer {
 
 /* =========================
    Media Queries
-========================= */
+   ========================= */
+/* Adjust map aspect ratio for medium screens */
 @media (max-width: 1200px) {
     .map-container {
         padding-bottom: 50%;
     }
 }
 
+/* Adjust for tablets */
 @media (max-width: 992px) {
     .map-container {
         padding-bottom: 60%;
     }
 }
 
+/* Adjustments for smaller tablets and mobile */
 @media (max-width: 768px) {
     #about {
         flex-direction: column;
@@ -588,6 +637,7 @@ footer {
         align-items: center;
     }
 
+    /* Collapsible mobile nav */
     nav {
         display: none;
         flex-direction: column;
@@ -615,9 +665,6 @@ footer {
     }
 
     header {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
     }
 
@@ -635,6 +682,7 @@ footer {
     }
 }
 
+/* Very small screens */
 @media (max-width: 576px) {
     .map-container {
         padding-bottom: 80%;
@@ -651,6 +699,7 @@ footer {
     }
 }
 
+/* Additional small-screen tweaks */
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
@@ -663,7 +712,6 @@ footer {
     }
 
     .profile {
-        border-radius: 20px;
         margin-bottom: 10px;
         height: 200px;
         width: 200px;
@@ -683,6 +731,7 @@ footer {
     }
 }
 
+/* Responsive clock for very small devices */
 @media (max-width: 600px) {
     .clock {
         padding: 15px 20px;
