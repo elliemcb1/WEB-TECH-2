@@ -1,0 +1,25 @@
+# Global rules
+User-agent: *
+Allow: /
+
+# Block common non-content paths (optional safety)
+Disallow: /admin/
+Disallow: /drafts/
+Disallow: /.netlify/
+Disallow: /cgi-bin/
+
+# Allow important assets
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.gif$
+Allow: /*.svg$
+
+# Crawl delay (mainly for Bing, ignored by Google)
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://jo-smithphotography.netlify.app/sitemap.xml
