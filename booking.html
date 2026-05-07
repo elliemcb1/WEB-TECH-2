@@ -2,145 +2,376 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jo Smith | Photography Booking</title>
+    <!-- =========================
+         SEO & META TAGS
+    ========================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="author" content="Ellie McBride">
-  <!-- Animate On Scroll library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Book Wedding Photography Session | Jo Smith Photography Dundee</title>
 
-  <!-- Favicon for browser tab -->
-  <link rel="icon" type="image/x-icon" href="/images//favicon_io/favicon.ico">
+    <meta name="description"
+        content="Book a professional wedding, portrait, family or commercial photography session with Jo Smith Photography in Dundee, Scotland.">
 
-  <!-- Font Awesome icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="keywords"
+        content="Wedding photographer Dundee, photography booking Scotland, portrait photographer Dundee, wedding photography Scotland">
+
+    <meta name="author" content="Ellie McBride">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="GalleryPage">
 
-  <!-- Header section with logo and navigation -->
-  <header>
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header>
 
-    <!-- Logo -->
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/JoSmithLogo.svg"
+                 alt="Jo Smith Photography logo">
+        </div>
 
+        <!-- Mobile Navigation Button -->
+        <button class="hamburger"
+                id="hamburger"
+                aria-label="Toggle navigation menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-    <div class="logo">
-      <img src="images/JoSmithLogo.svg" alt="logo">
-    </div>
+        <!-- Navigation -->
+        <nav id="nav-menu" aria-label="Main navigation">
 
-    <!-- Hamburger Button for mobile navigation -->
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+            <a href="index.html">Home</a>
 
-    <!-- Navigation Menu -->
-    <nav id="nav-menu">
-      <a href="index.html">Welcome</a>
-      <a href="gallery.html">Explore My Visual Stories</a>
-      <a href="booking.html">Schedule a Shoot</a>
-      <a href="about.html">Behind the Lens</a>
+            <a href="gallery.html">Gallery</a>
 
-    </nav>
-  </header>
+            <a href="booking.html"
+               class="pageactive"
+               aria-current="page">
+               Book a Session
+            </a>
 
-  <!-- Slideshow / hero section -->
-  <div class="slideshow">
-    <!-- Background slides -->
-    <div class="slide active" style="background-image: url('images/sunrise.png');"></div>
-    <div class="slide" style="background-image: url('images/wedding.jpg');"></div>
-    <div class="slide" style="background-image: url('images/Nature.jpg');"></div>
+            <a href="about.html">About Me</a>
 
-    <!-- Overlay text with call-to-action -->
-    <div class="overlay">
-      <h1>Click arrow to Book now</h1>
-      <a href="booking.html#contact">
-        <img src="images/Arrow.ico" alt="arrow" class="logo-img">
-      </a>
-    </div>
-  </div>
+            <a href="index.html#contact">Contact</a>
 
-  <!-- Contact / booking section -->
-  <section id="contact">
-    <!-- Time display  -->
-    <div class="clock">
-      <div id="time"></div>
-      <div id="Date"></div>
-    </div>
-    <h2>Book a Photography Session</h2>
+        </nav>
 
-    <!-- Booking form section -->
-    <section id="booking" class="contact-section">
-      <h3>Complete the form to book your session. You’ll get a confirmation email right away.</h3>
+    </header>
 
-      <!-- Booking form using EmailJS -->
-      <form id="booking-form" class="contact-form">
-        <!-- Hidden field for EmailJS -->
-        <input type="hidden" name="to_email" value="{{to_email}}">
+    <!-- =========================
+         HERO SLIDESHOW
+    ========================== -->
+    <section class="slideshow" aria-label="Photography showcase">
 
-        <!-- Name field -->
-        <label for="user_name">Name*</label>
-        <input type="text" id="user_name" name="user_name" required>
+        <!-- Slides -->
+        <div class="slide active"
+             style="background-image: url('images/sunrise.png');">
+        </div>
 
-        <!-- Email field -->
-        <label for="email">Email*</label>
-        <input type="email" id="email" name="email" required>
+        <div class="slide"
+             style="background-image: url('images/wedding.jpg');">
+        </div>
 
-        <!-- Service type dropdown -->
-        <label for="service">Service Type*</label>
-        <select id="service" name="service" required>
-          <option value="">-- Please choose --</option>
-          <option value="Nature Photography">Nature Photography £25 p/h </option>
-          <option value="Portraits">Portraits £20-£50p/h</option>
-          <option value="Events"> weddings/Events £140 p/h</option>
-          <option value="Commercial">Commercial</option>
-        </select>
+        <div class="slide"
+             style="background-image: url('images/Nature.jpg');">
+        </div>
 
-        <!-- Budget input -->
-        <label for="budget">Budget (£)</label>
-        <p> please leave budget if selected commercial</p>
-        <input type="number" id="budget" name="budget" min="50" step="10">
+        <!-- Overlay Content -->
+        <div class="overlay">
 
-        <!-- Preferred date input -->
-        <label for="date">Preferred Date*</label>
-        <input type="date" id="date" name="date" required>
+            <h1>
+                Book Your Wedding Photography Session in Dundee
+            </h1>
 
-        <!-- Additional notes -->
-        <label for="message">Additional Notes</label>
-        <textarea id="message" name="message" rows="5"></textarea>
+            <p>
+                Capture timeless memories with professional photography across Scotland.
+            </p>
 
-        <!-- Submit button -->
-        <button type="submit">Book Now</button>
-      </form>
+            <a href="#booking"
+               class="bookShortcut"
+               aria-label="Go to booking form">
+                Book Now
+            </a>
 
-      <!-- User guidance and form status message -->
-      <p>Also check your junk folder if you don’t see the email.</p>
-      <p id="form-status" class="status-message"></p>
+        </div>
+
     </section>
-  </section>
 
-  <!-- Footer section -->
-  <footer>
-    <!-- Social links placeholder -->
-    <div class="socials">
-      <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://x.com/yourprofile" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.tiktok.com/@yourprofile" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://www.youtube.com/@yourprofile" target="_blank"><i class="fab fa-youtube"></i></a>
+    <!-- =========================
+         BOOKING SECTION
+    ========================== -->
+    <main>
+
+        <section id="booking"
+                 class="contact-section">
+
+            <!-- Live Clock -->
+            <div class="clock">
+
+                <div id="time"></div>
+
+                <div id="Date"></div>
+
+            </div>
+
+            <h2>
+                Book a Photography Session
+            </h2>
+
+            <p>
+                Complete the booking form below and receive confirmation by email.
+            </p>
+
+            <!-- Booking Form -->
+            <form id="booking-form"
+                  class="contact-form">
+
+                <!-- Hidden EmailJS Field -->
+                <input type="hidden"
+                       name="to_email"
+                       value="{{to_email}}">
+
+                <!-- Name -->
+                <label for="user_name">
+                    Full Name*
+                </label>
+
+                <input type="text"
+                       id="user_name"
+                       name="user_name"
+                       autocomplete="name"
+                       required>
+
+                <!-- Email -->
+                <label for="email">
+                    Email Address*
+                </label>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       autocomplete="email"
+                       required>
+
+                <!-- Service -->
+                <label for="service">
+                    Photography Service*
+                </label>
+
+                <select id="service"
+                        name="service"
+                        required>
+
+                    <option value="">
+                        -- Please choose --
+                    </option>
+
+                    <option value="Nature Photography">
+                        Nature Photography — £25 p/h
+                    </option>
+
+                    <option value="Portraits">
+                        Portrait Sessions — £20–£50 p/h
+                    </option>
+
+                    <option value="Events">
+                        Weddings & Events — £140 p/h
+                    </option>
+
+                    <option value="Commercial">
+                        Commercial Photography
+                    </option>
+
+                </select>
+
+                <!-- Budget -->
+                <label for="budget">
+                    Budget (£)
+                </label>
+
+                <p>
+                    Please include a budget if selecting commercial photography.
+                </p>
+
+                <input type="number"
+                       id="budget"
+                       name="budget"
+                       min="50"
+                       step="10">
+
+                <!-- Date -->
+                <label for="date">
+                    Preferred Date*
+                </label>
+
+                <input type="date"
+                       id="date"
+                       name="date"
+                       required>
+
+                <!-- Notes -->
+                <label for="message">
+                    Additional Notes
+                </label>
+
+                <textarea id="message"
+                          name="message"
+                          rows="5"></textarea>
+
+                <!-- Submit -->
+                <button type="submit">
+                    Book Now
+                </button>
+
+            </form>
+
+            <!-- Form Status -->
+            <p>
+                Please check your junk folder if you do not receive your confirmation email.
+            </p>
+
+            <p id="form-status"
+               class="status-message">
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+
+        <!-- Social Links -->
+        <div class="socials">
+
+            <a href="https://www.instagram.com/yourprofile"
+               target="_blank"
+               aria-label="Instagram">
+
+                <i class="fab fa-instagram"></i>
+
+            </a>
+
+            <a href="https://x.com/yourprofile"
+               target="_blank"
+               aria-label="X Twitter">
+
+                <i class="fab fa-x-twitter"></i>
+
+            </a>
+
+            <a href="https://www.facebook.com/yourprofile"
+               target="_blank"
+               aria-label="Facebook">
+
+                <i class="fab fa-facebook-f"></i>
+
+            </a>
+
+            <a href="https://www.tiktok.com/@yourprofile"
+               target="_blank"
+               aria-label="TikTok">
+
+                <i class="fab fa-tiktok"></i>
+
+            </a>
+
+            <a href="https://www.youtube.com/@yourprofile"
+               target="_blank"
+               aria-label="YouTube">
+
+                <i class="fab fa-youtube"></i>
+
+            </a>
+
+        </div>
+
+        <!-- Footer Navigation -->
+        <p>
+            <a href="cookies.html">
+                Cookies Policy
+            </a>
+        </p>
+
+        <!-- Copyright -->
+        <p>
+            &copy; 2025 Jo Smith Photography
+        </p>
+
+    </footer>
+
+    <!-- =========================
+         COOKIE BANNER
+    ========================== -->
+    <div id="cookie-banner">
+
+        This site uses cookies to improve your experience.
+
+        <a href="cookies.html"
+           class="cookie-btn">
+           Read Policy
+        </a>
+
+        <button onclick="acceptCookies()">
+            Accept
+        </button>
+
     </div>
 
-    <!-- Copyright -->
-    <p>&copy; 2025 Jo Smith Photography</p>
-  </footer>
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
 
-  <!-- Load EmailJS SDK for form submission -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-  <!-- Main JavaScript file -->
-  <script src="Js/script.js"></script>
+    <!-- Main JS -->
+    <script src="Js/script.js"></script>
+
+    <!-- Cookie Script -->
+    <script>
+
+        function acceptCookies() {
+
+            localStorage.setItem(
+                "cookiesAccepted",
+                "true"
+            );
+
+            document.getElementById(
+                "cookie-banner"
+            ).style.display = "none";
+        }
+
+        if (
+            localStorage.getItem(
+                "cookiesAccepted"
+            )
+        ) {
+
+            document.getElementById(
+                "cookie-banner"
+            ).style.display = "none";
+        }
+
+    </script>
+
 </body>
 
 </html>
